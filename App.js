@@ -2,10 +2,16 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
+  componentDidMount() {
+    console.log('Before');
+    debugger;
+    console.log('After');
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hello World</Text>
+        <Text>Hello World 2</Text>
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
       </View>

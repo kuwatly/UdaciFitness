@@ -9,32 +9,32 @@ export default function UdaciSteppers({max, unit, step, value, onIncrement, onDe
       {Platform.OS === 'ios'
         ?
         <View style={{flexDirection: 'row'}}>
-            <TouchableOpacity
-              style={[styles.iosBtn, {borderTopRightRadius: 0, borderBottomRightRadius: 0}]}
-              onPress={onDecrement}>
-              <Entypo name='minus' size={30} color=purple/>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[styles.iosBtn, {borderTopLeftRadius: 0, borderBottomLeftRadius: 0}]}
-              onPress={onIncrement}>
-              <Entypo name='plus' size={30} color=purple/>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity
+            style={[styles.iosBtn, {borderTopRightRadius: 0, borderBottomRightRadius: 0}]}
+            onPress={onDecrement}>
+            <Entypo name='minus' size={30} color={purple}/>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.iosBtn, {borderTopLeftRadius: 0, borderBottomLeftRadius: 0}]}
+            onPress={onIncrement}>
+            <Entypo name='plus' size={30} color={purple}/>
+          </TouchableOpacity>
+        </View>
         :
         <View style={{flexDirection: 'row'}}>
-        <TouchableOpacity
-        style={[styles.androidBtn, {borderTopRightRadius: 0, borderBottomRightRadius: 0}]}
-        onPress={onDecrement}>
-        <FontAwesome name='minus' size={30} color=white/>
-        </TouchableOpacity>
-        <TouchableOpacity
-        style={[styles.androidBtn, {borderTopLeftRadius: 0, borderBottomLeftRadius: 0}]}
-        onPress={onIncrement}>
-        <FontAwesome name='plus' size={30} color=white/>
-        </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.androidBtn, {borderTopRightRadius: 0, borderBottomRightRadius: 0}]}
+            onPress={onDecrement}>
+            <FontAwesome name='minus' size={30} color={white}/>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.androidBtn, {borderTopLeftRadius: 0, borderBottomLeftRadius: 0}]}
+            onPress={onIncrement}>
+            <FontAwesome name='plus' size={30} color={white}/>
+          </TouchableOpacity>
         </View>
-        }
-      <View style = {styles.metricCounter}>
+      }
+      <View style={styles.metricCounter}>
         <Text style={{fontSize: 24, textAlign: 'center'}}>{value}</Text>
         <Text style={{fontSize: 18, color: gray}}>{unit}</Text>
       </View>

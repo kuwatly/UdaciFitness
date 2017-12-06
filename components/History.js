@@ -16,7 +16,7 @@ class History extends Component {
   };
 
   componentDidMount () {
-    const { dispatch } = this.props
+    const { dispatch } = this.props;
 
     fetchCalendarResults()
       .then((entries) => dispatch(receiveEntries(entries)))

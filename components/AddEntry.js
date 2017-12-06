@@ -77,7 +77,7 @@ class AddEntry extends Component {
       eat: 0,
     }));
 
-    this.toHome()
+    this.toHome();
 
     submitEntry({ key, entry});
   };
@@ -89,14 +89,14 @@ class AddEntry extends Component {
       [key]: getDailyReminderValue()
     }));
 
-    this.toHome()
+    this.toHome();
 
     removeEntry(key);
   };
 
   toHome = () => {
     this.props.navigation.dispatch(NavigationActions.back({key: 'AddEntry'}))
-  }
+  };
 
   render() {
     const metaInfo = getMetricMetaInfo();
